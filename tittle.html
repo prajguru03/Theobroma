@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Title with Line</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .center-line {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .center-line::before, 
+        .center-line::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #ddd;
+        }
+        .center-line:not(:empty)::before {
+            margin-right: .25em;
+        }
+        .center-line:not(:empty)::after {
+            margin-left: .25em;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <!-- Centered Line with Title -->
+    <div class="row">
+        <div class="col-12">
+            <div class="center-line"><h1>Promos</h1></div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
